@@ -1,0 +1,31 @@
+@mixin for-phone-only {
+    @media (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-up {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin background-image-2x {
+    @media  (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                @content;
+            }
+}

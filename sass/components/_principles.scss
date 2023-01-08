@@ -1,0 +1,50 @@
+.principles {
+    max-width: 100%;
+
+    @include for-tablet-up {
+        width: calc((100% - 24px) / 2);
+        max-width: 300px;
+    }
+
+    @include for-desktop-up {
+        max-width: 264px;
+    }
+}
+
+.principles__icon {
+    display: none;
+
+    @include for-desktop-up {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 264px;
+        height: 112px;
+        background-color: var(--color-light);
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+}
+
+.principles__title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.11;
+    color: var(--color-dark);
+    margin-bottom: 8px;
+
+    @include for-tablet-up {
+        text-align: start;
+    }
+
+    @include for-desktop-up {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+.principles__text {
+    font-size: 16px;
+    line-height: 1.5;
+}

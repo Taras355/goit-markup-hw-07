@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+a,
+button {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

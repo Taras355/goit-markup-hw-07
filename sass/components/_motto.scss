@@ -1,0 +1,14 @@
+.motto {
+    max-width: 264px;
+
+    @include for-phone-only {
+        text-align: center;
+    }
+}
+
+.motto__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-accent);
+    margin-top: 16px;
+}

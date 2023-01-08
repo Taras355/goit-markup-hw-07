@@ -1,0 +1,28 @@
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primarybrand);
+    color: var(--color-light);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        background-color: var(--color-pressedstate);
+    }
+
+    &:focus {
+        background-color: var(--color-pressedstate);
+    }
+}
+
+.icon__svg {
+    fill: currentColor;
+}

@@ -1,0 +1,22 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 72px;
+
+    &--row-gap-small {
+        row-gap: 48px;
+    }
+
+    &--small-mobile-column-gap {
+        @include for-phone-only {
+            column-gap: 16px;
+        }
+    }
+
+    &--small-row-gap {
+        row-gap: 16px;
+    }
+}

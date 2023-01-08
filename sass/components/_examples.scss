@@ -1,0 +1,22 @@
+.examples {
+    padding: 48px 0px;
+
+    @include for-tablet-up {
+        padding: 64px 0px 96px 0px;
+    }
+    @include for-desktop-up {
+        padding: 96px 0px 120px 0px;
+    }
+}
+
+.examples__flex-container {
+    margin-bottom: 48px;
+
+    @include for-tablet-up {
+        margin-bottom: 64px;
+    }
+    @include for-desktop-up {
+        margin-bottom: 72px;
+    }
+    
+}

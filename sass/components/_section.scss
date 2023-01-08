@@ -1,0 +1,22 @@
+.section {
+    padding: 96px 0;
+
+    @include for-desktop-up {
+        padding: 120px 0;
+    }
+
+    &--light {
+        background-color: var(--color-light);
+    }
+
+    &--pt0 {
+        padding-top: 0px;
+    }
+
+    &--desktop-only {
+        display: none;
+        @include for-desktop-up {
+            display: block;
+        }
+    }
+}
