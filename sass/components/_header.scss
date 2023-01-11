@@ -2,8 +2,14 @@
     display: flex;
     align-items: center;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
     min-height: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--color-white);
+    @include for-tablet-landscape-up {
+        position: static;
+    }
 }
 
 .header__wrapper {

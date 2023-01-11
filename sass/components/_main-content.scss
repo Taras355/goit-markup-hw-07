@@ -1,0 +1,7 @@
+.main-content {
+    padding-top: 70px;
+
+    @include for-tablet-landscape-up {
+        padding-top: 0px;
+    }
+}

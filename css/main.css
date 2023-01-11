@@ -338,6 +338,7 @@ img {
   top: 0;
   left: 0;
   cursor: not-allowed;
+  z-index: 2;
   background-color: var(--color-modaloverlay);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -883,6 +884,15 @@ img {
   -webkit-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
           box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   min-height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--color-white);
+}
+@media (min-width: 768px) {
+  .header {
+    position: static;
+  }
 }
 
 .header__wrapper {
@@ -1082,8 +1092,18 @@ img {
   color: var(--color-light);
 }
 
+.main-content {
+  padding-top: 70px;
+}
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 0px;
+  }
+}
+
 .mobile-menu {
   position: fixed;
+  visibility: hidden;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1113,6 +1133,7 @@ img {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+  visibility: visible;
 }
 @media (min-width: 768px) {
   .mobile-menu {
@@ -1125,6 +1146,14 @@ img {
   right: 40px;
 }
 
+@media (max-height: 530px) {
+  .mobile-menu__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .mobile-menu__link {
   font-weight: 700;
   font-size: 36px;
@@ -1134,6 +1163,17 @@ img {
   margin-bottom: 40px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-height: 530px) {
+  .mobile-menu__link {
+    margin-bottom: 8px;
+    margin-right: 24px;
+  }
+}
+@media (max-height: 530px) and (max-width: 550px) {
+  .mobile-menu__link {
+    font-size: 6vw;
+  }
 }
 .mobile-menu__link:hover {
   color: var(--color-pressedstate);
@@ -1148,12 +1188,17 @@ img {
 .mobile-menu__tel {
   display: block;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 7.9vw;
   line-height: 1.11;
   color: var(--color-primarybrand);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 40px;
+}
+@media (min-width: 480px) {
+  .mobile-menu__tel {
+    font-size: 36px;
+  }
 }
 .mobile-menu__tel:hover {
   color: var(--color-pressedstate);
