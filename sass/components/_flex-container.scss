@@ -6,6 +6,10 @@
     column-gap: 24px;
     row-gap: 72px;
 
+    &--align-start {
+        align-items: flex-start;
+    }
+
     &--row-gap-small {
         row-gap: 48px;
     }

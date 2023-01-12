@@ -23,7 +23,7 @@
 }
 
 .header__logo {
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         margin-right: 76px;
     }
 }

@@ -1,9 +1,8 @@
 .principles {
-    max-width: 100%;
+    // max-width: 100%;
 
     @include for-tablet-up {
         width: calc((100% - 24px) / 2);
-        max-width: 300px;
     }
 
     @include for-desktop-up {

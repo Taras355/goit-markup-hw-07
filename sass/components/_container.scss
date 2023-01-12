@@ -2,9 +2,10 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+    max-width: 480px;
 
     @include for-tablet-landscape-up {
-        max-width: 752px;
+        max-width: 768px;
     }
 
     @include for-desktop-up {
