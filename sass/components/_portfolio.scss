@@ -15,12 +15,8 @@
 }
 
 .portfolio__image {
-    min-width: 90vw;
-    max-width: 90vw;
-
-    @include for-tablet-up {
-        min-width: auto;
-        max-width: 324px;
+    @include for-tablet-landscape-up {
+        max-width: 356px;
     }
     
     @include for-desktop-up {

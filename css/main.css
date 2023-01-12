@@ -1358,14 +1358,9 @@ img {
   max-width: 100%;
 }
 
-.portfolio__image {
-  min-width: 90vw;
-  max-width: 90vw;
-}
 @media (min-width: 768px) {
   .portfolio__image {
-    min-width: auto;
-    max-width: 324px;
+    max-width: 356px;
   }
 }
 @media (min-width: 1200px) {
