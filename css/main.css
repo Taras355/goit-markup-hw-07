@@ -329,6 +329,25 @@ img {
   /* light red */
   --color-transparent: rgb(244, 244, 253, 0);
   /* transparent */
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primarybrand: rgb(83, 97, 253);
+    --color-pressedstate: rgb(67, 78, 197);
+    --color-dark: rgb(113, 116, 214);
+    --color-success: rgb(35, 139, 115);
+    --color-text: rgb(137, 139, 173);
+    --color-subtletext: rgb(152, 153, 165);
+    --color-minortext: rgb(153, 152, 152);
+    --color-accent: rgb(62, 62, 66);
+    --color-light: rgb(31, 31, 31);
+    --color-white: rgb(0, 0, 0);
+    --color-modaloverlay: rgba(91, 93, 124, 0.4);
+    --color-herobackground: rgba(33, 34, 48, 0.7);
+    --color-invalid: rgb(255, 51, 51, 0.5);
+    --color-transparent: rgb(244, 244, 253, 0);
+  }
 }
 
 .backdrop {
@@ -358,6 +377,11 @@ img {
   line-height: 1.5;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  .button {
+    color: rgb(235, 235, 235);
+  }
 }
 .button:hover {
   background-color: var(--color-pressedstate);
@@ -432,6 +456,11 @@ img {
   color: var(--color-dark);
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  .contact-form__input {
+    border-color: rgba(212, 212, 212, 0.2);
+  }
 }
 .contact-form__input:focus {
   border-color: var(--color-primarybrand);
@@ -999,6 +1028,11 @@ img {
   max-width: 492px;
   margin: 0 auto 72px;
 }
+@media (prefers-color-scheme: dark) {
+  .hero__title {
+    color: rgb(235, 235, 235);
+  }
+}
 @media (min-width: 768px) {
   .hero__title {
     font-size: 56px;
@@ -1114,6 +1148,8 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   padding: 80px 40px 40px 40px;
   background-color: var(--color-white);
   z-index: 99;
@@ -1347,9 +1383,21 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (prefers-color-scheme: dark) {
+  .portfolio {
+    -webkit-box-shadow: rgba(132, 135, 189, 0.08);
+            box-shadow: rgba(132, 135, 189, 0.08);
+  }
+}
 .portfolio:hover {
   -webkit-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
           box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  .portfolio:hover {
+    -webkit-box-shadow: 0px 1px 6px rgba(132, 135, 190, 0.08), 0px 1px 1px rgba(125, 127, 177, 0.16), 0px 2px 1px rgba(141, 144, 199, 0.08);
+            box-shadow: 0px 1px 6px rgba(132, 135, 190, 0.08), 0px 1px 1px rgba(125, 127, 177, 0.16), 0px 2px 1px rgba(141, 144, 199, 0.08);
+  }
 }
 
 .portfolio__wrapper {
@@ -1581,6 +1629,11 @@ img {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (prefers-color-scheme: dark) {
+  .subscribe-form__input {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
 .subscribe-form__input:focus {
   border-color: var(--color-primarybrand);
 }
@@ -1618,6 +1671,23 @@ img {
   line-height: 2;
   color: rgba(255, 255, 255, 0.6);
 }
+@media (prefers-color-scheme: dark) {
+  .subscribe-form__input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .subscribe-form__input::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .subscribe-form__input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .subscribe-form__input::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .subscribe-form__input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
 @media (max-width: 767px) {
   .subscribe-form__input {
     width: 100%;
@@ -1637,6 +1707,11 @@ img {
   gap: 16px;
   padding: 8px 24px;
   fill: var(--color-white);
+}
+@media (prefers-color-scheme: dark) {
+  .subscribe-form__button {
+    fill: rgb(235, 235, 235);
+  }
 }
 
 .team-card {

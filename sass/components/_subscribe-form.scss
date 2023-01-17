@@ -17,6 +17,9 @@
     padding: 8px 16px;
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    @media (prefers-color-scheme: dark) {
+        border-color: rgba(0, 0, 0, 0.3);
+    }
     border-radius: 4px;
     color: var(--color-light);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,6 +36,9 @@
         font-size: 12px;
         line-height: 2;
         color: rgba(255, 255, 255, 0.6);
+        @media (prefers-color-scheme: dark) {
+            color: rgba(0, 0, 0, 0.6);
+        }   
     }
 
     @include for-phone-only {
@@ -47,4 +53,7 @@
     gap: 16px;
     padding: 8px 24px;
     fill: var(--color-white);
+    @media (prefers-color-scheme: dark) {
+        fill:rgb(235, 235, 235);
+    }
 }

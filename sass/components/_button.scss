@@ -3,6 +3,9 @@
     border-radius: 4px;
     border: none;
     color: var(--color-white);
+    @media (prefers-color-scheme: dark) {
+        color: rgb(235, 235, 235);
+    }
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;

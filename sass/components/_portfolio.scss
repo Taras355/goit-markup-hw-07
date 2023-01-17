@@ -1,10 +1,15 @@
 .portfolio {
     border-bottom: 0.5px solid var(--color-light);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    @media (prefers-color-scheme: dark) {
+        box-shadow: rgba(132, 135, 189, 0.08);
+    }
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 0px 1px 6px rgba(132, 135, 190, 0.08), 0px 1px 1px rgba(125, 127, 177, 0.16), 0px 2px 1px rgba(141, 144, 199, 0.08);        }
     }
 }
 

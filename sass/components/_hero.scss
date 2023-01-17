@@ -33,6 +33,9 @@
     line-height: 1.11;
     text-align: center;
     color: var(--color-white);
+    @media (prefers-color-scheme: dark) {
+        color: rgb(235, 235, 235);
+    }
     max-width: 492px;
     margin: 0 auto 72px;
 
