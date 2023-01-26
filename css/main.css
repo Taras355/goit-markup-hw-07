@@ -1143,7 +1143,6 @@ img {
 
 .mobile-menu {
   position: fixed;
-  visibility: hidden;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1175,7 +1174,6 @@ img {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  visibility: visible;
 }
 @media (min-width: 768px) {
   .mobile-menu {
@@ -1188,11 +1186,12 @@ img {
   right: 40px;
 }
 
-@media (max-height: 530px) {
+@media (max-height: 400px) and (min-width: 350px) {
   .mobile-menu__nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 5px;
   }
 }
 
@@ -1209,12 +1208,7 @@ img {
 @media (max-height: 530px) {
   .mobile-menu__link {
     margin-bottom: 8px;
-    margin-right: 24px;
-  }
-}
-@media (max-height: 530px) and (max-width: 550px) {
-  .mobile-menu__link {
-    font-size: 6vw;
+    font-size: 5.5vh;
   }
 }
 .mobile-menu__link:hover {
@@ -1230,17 +1224,12 @@ img {
 .mobile-menu__tel {
   display: block;
   font-weight: 600;
-  font-size: 7.9vw;
+  font-size: min(7.9vw, 36px);
   line-height: 1.11;
   color: var(--color-primarybrand);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 40px;
-}
-@media (min-width: 768px) {
-  .mobile-menu__tel {
-    font-size: 36px;
-  }
 }
 .mobile-menu__tel:hover {
   color: var(--color-pressedstate);

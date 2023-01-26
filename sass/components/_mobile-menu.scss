@@ -1,6 +1,5 @@
 .mobile-menu {
     position: fixed;
-    visibility: hidden;
     top: 0;
     left: 0;
     width: 100vw;
@@ -21,7 +20,6 @@
     &.is-open {
         transform: translateY(0);
         opacity: 1;
-        visibility: visible;
     }
 
     @include for-tablet-landscape-up {
@@ -35,8 +33,9 @@
 }
 
 .mobile-menu__nav {
-    @media (max-height: 530px) {
+    @media (max-height: 400px) and (min-width: 350px) {
         display: flex;
+        gap: 5px;
     }
 }
 
@@ -51,11 +50,7 @@
 
     @media (max-height: 530px) {
         margin-bottom: 8px;
-        margin-right: 24px;
-
-        @media (max-width: 550px) {
-            font-size: 6vw;
-        }
+        font-size: 5.5vh;
     }
 
     &:hover {
@@ -72,15 +67,11 @@
 .mobile-menu__tel {
     display: block;
     font-weight: 600;
-    font-size: 7.9vw;
+    font-size: min(7.9vw, 36px);
     line-height: 1.11;
     color: var(--color-primarybrand);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 40px;
-
-    @include for-tablet-up {
-        font-size: 36px;
-    }
 
     &:hover {
         color: var(--color-pressedstate);
